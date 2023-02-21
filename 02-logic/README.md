@@ -20,7 +20,7 @@
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   Last two digits of my student ID: **xxxx??**
+   Last two digits of my student ID: **xxxx00**
 
 ```vhdl
         p_stimulus : process
@@ -48,6 +48,9 @@
 2. Link to your public EDA Playground example:
 
    [https://edaplayground.com/x/AiUf](https://edaplayground.com/x/AiUf)
+
+
+Pre-Lab Prep
 
 *Digital* or *Binary comparator* compares the digital signals A, B presented at input terminal and produce outputs depending upon the condition of those inputs.
 
