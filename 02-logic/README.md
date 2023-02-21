@@ -50,7 +50,7 @@
    [https://edaplayground.com/x/AiUf](https://edaplayground.com/x/AiUf)
 
 
-Pre-Lab Prep
+### Pre-Lab Prep
 
 *Digital* or *Binary comparator* compares the digital signals A, B presented at input terminal and produce outputs depending upon the condition of those inputs.
 
