@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/07/2023 12:01:09 PM
+-- Create Date: 03/08/2023 09:40:12 AM
 -- Design Name: 
 -- Module Name: t_ff_rst - Behavioral
 -- Project Name: 
@@ -40,11 +40,9 @@ entity t_ff_rst is
 end t_ff_rst;
 
 architecture behavioral of t_ff_rst is
-
     -- It must use this local signal instead of output ports
     -- because "out" ports cannot be read within the architecture
     signal sig_q : std_logic;
-
 begin
     --------------------------------------------------------
     -- p_t_ff_rst:
@@ -57,13 +55,12 @@ begin
     p_t_ff_rst : process (clk)
     begin
         if rising_edge(clk) then
-        -- WRITE YOUR CODE HERE
-            if (rst = '1') then
-                sig_q <= '0';
-            elsif (t = '0') then
-                sig_q <= sig_q;
+        if rst = '1' then  
+                sig_q     <= '0';
             else
-                sig_q <= not sig_q;
+                if t = '1' then  
+                    sig_q     <= NOT sig_q ; 
+                end if;      
             end if;
         end if;
     end process p_t_ff_rst;

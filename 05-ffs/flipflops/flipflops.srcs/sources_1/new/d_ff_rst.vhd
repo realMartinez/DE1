@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/07/2023 11:11:53 AM
+-- Create Date: 03/08/2023 09:29:41 AM
 -- Design Name: 
 -- Module Name: d_ff_rst - Behavioral
 -- Project Name: 
@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity d_ff_rst is
-    Port ( clk : in STD_LOGIC;
+    Port ( d : in STD_LOGIC;
+           clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           d : in STD_LOGIC;
            q : out STD_LOGIC;
            q_bar : out STD_LOGIC);
 end d_ff_rst;
@@ -50,14 +50,16 @@ begin
     p_d_ff_rst : process (clk)
     begin
         if rising_edge(clk) then  -- Synchronous process
+
             -- USE HIGH-ACTIVE RESET HERE
-            if (rst = '1') then
+            if rst = '1' then  
                 q     <= '0';
-                q_bar <= '1';            
+                q_bar <= '1';
             else
                 q     <= d;
-                q_bar <= not d;
+                q_bar <= not d;                
             end if;
         end if;
     end process p_d_ff_rst;
 end architecture behavioral;
+
