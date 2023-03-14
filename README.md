@@ -1,3 +1,3 @@
 # DE1
 Homework Repo
-!(images/img.png)
+![img](images/img.png)
